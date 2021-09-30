@@ -1,5 +1,5 @@
 import "./great-ui.less";
-import { Button } from "./great-ui";
+import { Button, Card } from "./great-ui";
 import { useRef } from "react";
 import { List } from "./components/list/List";
 
@@ -60,6 +60,15 @@ function App() {
             </List.Item>
           )}
         />
+      </div>
+
+      <div>
+        <h1>Card</h1>
+        <div style={{ width: 340 }}>
+          <Card title="Default Card" bordered={true}>
+            Hallo ini card
+          </Card>
+        </div>
       </div>
     </div>
   );
