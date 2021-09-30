@@ -1,24 +1,66 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./great-ui.less";
+import { Button } from "./great-ui";
+import { useRef } from "react";
+import { List } from "./components/list/List";
+
+const data = [
+  {
+    name: "Irfan",
+    age: 25,
+  },
+  {
+    name: "Anindya",
+    age: 24,
+  },
+  {
+    name: "Budi Suharsono",
+    age: 22,
+  },
+];
 
 function App() {
+  const buttonRef = useRef();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div style={{ padding: 20 }}>
+      <div>
+        <h1>Single Button</h1>
+        <Button
+          type="primary"
+          ref={buttonRef}
+          id="haha"
+          className="good"
+          key="1"
         >
-          Learn React
-        </a>
-      </header>
+          Primary
+        </Button>{" "}
+        <Button type="secondary">Secondary</Button> <Button>Default</Button>{" "}
+        <Button type="outlined">Outlined</Button>{" "}
+      </div>
+      <br />
+      <div style={{ width: 340 }}>
+        <h1>Button Block</h1>
+        <Button
+          type="primary"
+          block
+          onClick={() => console.log("hallo")}
+          id="halo"
+        >
+          Button Block
+        </Button>
+      </div>
+
+      <div>
+        <h1>List</h1>
+        <List
+          data={data}
+          renderItem={(person, index) => (
+            <List.Item key={index} onClick={() => console.log(person.name)}>
+              {person.name}
+            </List.Item>
+          )}
+        />
+      </div>
     </div>
   );
 }

@@ -1,0 +1,20 @@
+.gu-list {
+  list-style: none;
+  margin: 1px 0px;
+  padding: 0px;
+}
+
+.gu-list > .gu-list-item {
+  list-style: none;
+  padding: 10px 20px;
+  border: @default-border;
+  margin: -1px 0px;
+}
+
+.gu-list > .gu-list-item:first-child {
+  border-radius: @border-radius @border-radius 0px 0px;
+}
+
+.gu-list > .gu-list-item:last-child {
+  border-radius: 0px 0px @border-radius @border-radius;
+}
