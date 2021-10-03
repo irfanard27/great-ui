@@ -1,5 +1,5 @@
 import "./great-ui.less";
-import { Button, Card } from "./great-ui";
+import { Alert, Button, ButtonGroup, Card } from "./great-ui";
 import { useRef } from "react";
 import { List } from "./components/list/List";
 
@@ -20,6 +20,11 @@ const data = [
 
 function App() {
   const buttonRef = useRef();
+
+  const openAlert = () => {
+    const a = Alert({ type: "default", children: "Halloo" });
+    console.log(a);
+  };
 
   return (
     <div style={{ padding: 20 }}>
@@ -51,6 +56,12 @@ function App() {
       </div>
 
       <div>
+        <h1>Button Group</h1>
+        <ButtonGroup>
+          <ButtonGroup.Item>hai</ButtonGroup.Item>
+        </ButtonGroup>
+      </div>
+      <div>
         <h1>List</h1>
         <List
           data={data}
@@ -68,6 +79,13 @@ function App() {
           <Card title="Default Card" bordered={true}>
             Hallo ini card
           </Card>
+        </div>
+      </div>
+
+      <div>
+        <h1>Alert</h1>
+        <div style={{ width: 340 }}>
+          <Button onClick={openAlert}>Open Alert</Button>
         </div>
       </div>
     </div>

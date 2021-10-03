@@ -1,0 +1,32 @@
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    display: inherit;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+.gu-alert {
+  display: none;
+  padding: 15px;
+  box-shadow: 0px 3px 6px 3px rgba(68, 48, 48, 0.05);
+  background: #fff;
+  border-radius: @border-radius;
+  animation: fade-in 0.5s ease 0s;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  min-width: 200px;
+}

@@ -5,7 +5,7 @@ type ButtonGroupProps = {
   className?: string;
   type?: "outlined" | "default";
   style?: React.CSSProperties;
-  children?: React.ReactNode;
+  children?: typeof Item;
   id?: string;
 };
 
@@ -32,7 +32,7 @@ const InternalButtonGroup: React.ForwardRefRenderFunction<
 
   return (
     <span {...rest} {...types}>
-      {React.Children}
+      {props.children}
     </span>
   );
 };

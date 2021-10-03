@@ -62,6 +62,10 @@ function getType(props: ButtonProps) {
   return cls;
 }
 
+interface ButtonComponent extends React.ForwardRefExoticComponent<HTMLElement> {
+  Group?: any;
+}
+
 const InternalButton: React.ForwardRefRenderFunction<unknown, ButtonProps> = (
   props,
   ref
@@ -77,5 +81,8 @@ const InternalButton: React.ForwardRefRenderFunction<unknown, ButtonProps> = (
   );
 };
 
-const Button = React.forwardRef<unknown, ButtonProps>(InternalButton);
+const Button = React.forwardRef<unknown, ButtonProps>(
+  InternalButton
+) as ButtonComponent;
+Button.Group = null;
 export { Button };
