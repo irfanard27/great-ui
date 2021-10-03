@@ -5,19 +5,15 @@ type ButtonGroupProps = {
   className?: string;
   type?: "outlined" | "default";
   style?: React.CSSProperties;
-  children?: typeof Item;
+  children?: React.ReactNode;
   id?: string;
 };
 
-interface ButtonGroupComponent
-  extends React.ForwardRefExoticComponent<ButtonGroupProps> {
+interface ButtonGroupComponent extends React.ExoticComponent<ButtonGroupProps> {
   Item: typeof Item;
 }
 
-const InternalButtonGroup: React.ForwardRefRenderFunction<
-  unknown,
-  ButtonGroupProps
-> = (props, ref) => {
+const InternalButtonGroup = (props: ButtonGroupProps) => {
   const { type, ...rest } = props;
   const types = (() => {
     switch (props.type) {
@@ -30,11 +26,7 @@ const InternalButtonGroup: React.ForwardRefRenderFunction<
     }
   })();
 
-  return (
-    <span {...rest} {...types}>
-      {props.children}
-    </span>
-  );
+  return <span {...rest} {...types} />;
 };
 
 const ButtonGroup = React.forwardRef<unknown, ButtonGroupProps>(

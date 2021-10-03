@@ -30,13 +30,7 @@ function App() {
     <div style={{ padding: 20 }}>
       <div>
         <h1>Single Button</h1>
-        <Button
-          type="primary"
-          ref={buttonRef}
-          id="haha"
-          className="good"
-          key="1"
-        >
+        <Button type="primary" ref={buttonRef}>
           Primary
         </Button>{" "}
         <Button type="secondary">Secondary</Button> <Button>Default</Button>{" "}
@@ -58,7 +52,9 @@ function App() {
       <div>
         <h1>Button Group</h1>
         <ButtonGroup>
-          <ButtonGroup.Item>hai</ButtonGroup.Item>
+          <ButtonGroup.Item>Left</ButtonGroup.Item>
+          <ButtonGroup.Item>Middle</ButtonGroup.Item>
+          <ButtonGroup.Item>Right</ButtonGroup.Item>
         </ButtonGroup>
       </div>
       <div>
