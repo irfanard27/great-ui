@@ -4,7 +4,7 @@ interface ItemProps {
   id?: string;
   type?: string;
   style?: React.CSSProperties;
-  key?: number;
+  key?: string;
   children?: React.ReactNode;
   onClick?(event: React.MouseEvent<HTMLButtonElement>): void;
 }

@@ -13,8 +13,12 @@ interface ButtonGroupComponent extends React.ExoticComponent<ButtonGroupProps> {
   Item: typeof Item;
 }
 
-const InternalButtonGroup = (props: ButtonGroupProps) => {
+const InternalButtonGroup: React.ForwardRefRenderFunction<
+  unknown,
+  ButtonGroupProps
+> = (props, ref) => {
   const { type, ...rest } = props;
+  const buttonGroupRef = (ref as any) || React.createRef<HTMLElement>();
   const types = (() => {
     switch (props.type) {
       case "outlined":
@@ -26,7 +30,11 @@ const InternalButtonGroup = (props: ButtonGroupProps) => {
     }
   })();
 
-  return <span {...rest} {...types} />;
+  return (
+    <span {...rest} {...types} ref={buttonGroupRef}>
+      {props.children}
+    </span>
+  );
 };
 
 const ButtonGroup = React.forwardRef<unknown, ButtonGroupProps>(

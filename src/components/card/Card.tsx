@@ -22,7 +22,7 @@ const isBordered = (props: any) => {
 };
 
 const InternalCard = (props: CardProps) => {
-  const { title, className, ...rest } = props;
+  const { title, bordered, className, ...rest } = props;
 
   const getClassName = isBordered(props);
 
