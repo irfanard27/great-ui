@@ -1,7 +1,7 @@
 import React from "react";
 
 type ShapeType = "radius" | "box" | "circle";
-type AvatarSizes = "small" | "default" | "large" | "super-large";
+type AvatarSizes = "xsmall" | "small" | "default" | "large" | "super-large";
 type AvatarColors = string | "red" | "blue" | "yellow" | "green" | "purple";
 
 interface AvatarProps {
@@ -30,6 +30,9 @@ const getClassName = (props: AvatarProps) => {
       break;
     case "small":
       cls = cls + " avatar-sm";
+      break;
+    case "xsmall":
+      cls = cls + " avatar-xsm";
       break;
     case "super-large":
       cls = cls + " avatar-super-lg";

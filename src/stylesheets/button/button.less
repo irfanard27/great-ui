@@ -2,17 +2,17 @@
 
 button {
   font-size: 14px;
-  font-family: "DM Sans";
+  //font-family: "DM Sans";
   cursor: pointer;
 }
 
 .button {
-  padding: 5px 16px;
+  padding: 7px 16px;
   border-radius: @border-radius;
   color: #5a5a5a;
-  border: solid 1px #ebebeb;
+  border: @default-border;
   background: #fff;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .button:active {
@@ -22,7 +22,7 @@ button {
 // --------------------  Primary-----------------------//
 .button-primary {
   background: @primary-color;
-  border: solid 1px @primary-color;
+  border: solid 1px darken(@primary-color, 3%);
   color: #fff;
 }
 .button-primary:active {
@@ -33,13 +33,13 @@ button {
 // --------------------  Secondary-----------------------//
 .button-secondary {
   background: @secondary-color;
-  border: solid 1px darken(@secondary-color, 2%);
+  border: solid 1px darken(@secondary-color, 10%);
   color: #fff;
   color: @primary-color;
 }
 .button-secondary:active {
-  background: lighten(@secondary-color, 1%);
-  border: solid 1px darken(@secondary-color, 2%);
+  background: darken(@secondary-color, 3%);
+  border: solid 1px darken(@secondary-color, 11%);
 }
 
 // --------------------  Outlined-----------------------//
@@ -118,19 +118,20 @@ button {
 }
 
 .button-lg{
-  padding: 5*2px 16*2px;
+  padding: 7*2px 16*2px;
   font-size: 16px;
 }
 
 .button-super-lg{
-  padding: 5*3px 16*3px;
+  padding: 7*3px 16*3px;
   font-size: 18px;
 }
 
 .button-sm{
-  padding: 2px 10px;
+  padding: 4px 10px;
 }
 
 .button-super-sm{
-  padding: 1px 10px;
+  padding: 2px 7px;
+  font-size: 13px;
 }

@@ -6,6 +6,8 @@ import { Alert as GUAlert } from "./components/alert/Alert";
 import { Title as GUTitle } from "./components/typography/Title";
 import { Avatar as GUAvatar } from "./components/avatar/Avatar";
 import { Row as GURow } from "./components/grid-system/Row";
+import { Modal as GUModal } from "./components/modal/Modal";
+import { Notification as GUNotification } from "./components/notification/Notification";
 
 export const Button = GUButton;
 export const ButtonGroup = GUButtonGroup;
@@ -15,3 +17,5 @@ export const Alert = GUAlert;
 export const Title = GUTitle;
 export const Avatar = GUAvatar;
 export const Row = GURow;
+export const Modal = GUModal;
+export const Notification = GUNotification;

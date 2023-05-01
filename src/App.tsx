@@ -1,14 +1,15 @@
 import "./great-ui.less";
 import {
-  Alert,
   Avatar,
   Button,
   ButtonGroup,
   Card,
+  Modal,
   Row,
   Title,
+  Notification,
 } from "./great-ui";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { List } from "./components/list/List";
 
 const data = [
@@ -29,14 +30,56 @@ const data = [
 function App() {
   const buttonRef = useRef();
   const avatarRef = useRef();
+
   const openAlert = () => {
-    const a = Alert({ type: "default", children: "Halloo" });
-    console.log(a);
+    setOpenModal(true);
   };
+
+  const openNotification = () => {
+    Notification({
+      message: "This is Notification Testing for you",
+      title: "Success",
+      type: "success",
+      onOpen: () => console.log("Notification Opened"),
+      onClose: () => console.log("Notification Closed"),
+    });
+  };
+
+  const openErrNotification = () => {
+    Notification({
+      message: "This is Notification Testing for you",
+      title: "Error",
+      type: "error",
+      onOpen: () => console.log("Notification Opened"),
+      onClose: () => console.log("Notification Closed"),
+    });
+  };
+
+  const openWarningNotification = () => {
+    Notification({
+      message: "This is Notification Testing for you",
+      title: "Waning for you",
+      type: "warning",
+      onOpen: () => console.log("Notification Opened"),
+      onClose: () => console.log("Notification Closed"),
+    });
+  };
+
+  const openInfoNotification = () => {
+    Notification({
+      message: "This is Notification Testing for you",
+      title: "New Announcement",
+      type: "info",
+      onOpen: () => console.log("Notification Opened"),
+      onClose: () => console.log("Notification Closed"),
+    });
+  };
+
+  const [openModal, setOpenModal] = useState(false);
 
   return (
     <div>
-      <div style={{ width: "49%", float: "left" }}>
+      <div>
         <div style={{ padding: 20 }}>
           <div>
             <h1>Single Button</h1>
@@ -139,15 +182,29 @@ function App() {
           </div>
 
           <div>
-            <h1>Alert</h1>
+            <h1>Modal</h1>
             <div style={{ width: 340 }}>
-              <Button onClick={openAlert}>Open Alert</Button>
+              <Button onClick={openAlert}>Open Modal</Button>
+            </div>
+          </div>
+          <br />
+          <div>
+            <h1>Notification</h1>
+
+            <div>
+              {" "}
+              <Button onClick={openNotification}>Success Notification</Button>
+              <Button onClick={openErrNotification}>Error Notification</Button>
+              <Button onClick={openWarningNotification}>
+                Warning Notification
+              </Button>
+              <Button onClick={openInfoNotification}>Info Notification</Button>
             </div>
           </div>
         </div>
       </div>
 
-      <div style={{ width: "50%", float: "left" }}>
+      <div>
         <div>
           <h1>Avatar</h1>
           <Avatar color="blue" ref={avatarRef}>
@@ -165,14 +222,21 @@ function App() {
       </div>
 
       <div style={{ marginTop: 20 }}>
-        <Row
-          onClick={() => {
-            console.log("hallo");
-          }}
-        >
+        <Row>
           <div>HAllo</div>
         </Row>
       </div>
+      <br />
+
+      <Modal
+        open={openModal}
+        title="This is Modal"
+        close={() => setOpenModal(false)}
+        width={600}
+        bordered={false}
+      >
+        hallo
+      </Modal>
     </div>
   );
 }
