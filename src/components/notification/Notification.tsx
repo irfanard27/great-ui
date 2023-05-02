@@ -63,8 +63,8 @@ function renderNotification(p: NotificationProps) {
 
 function openNotification(el: HTMLElement, onOpen: any) {
   setTimeout(() => {
-    el.classList.remove("hide");
-    el.classList.add("show");
+    el.classList.remove("hide-notification");
+    el.classList.add("show-notification");
     onOpen && onOpen();
   }, 100);
   //eventListener(el);
@@ -76,8 +76,8 @@ function removeNotification(
   onClose: any = () => {}
 ) {
   const t = setTimeout(() => {
-    el.classList.remove("show");
-    el.classList.add("hide");
+    el.classList.remove("show-notification");
+    el.classList.add("hide-notification");
 
     setTimeout(() => {
       el.remove();

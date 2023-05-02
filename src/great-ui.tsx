@@ -8,6 +8,7 @@ import { Avatar as GUAvatar } from "./components/avatar/Avatar";
 import { Row as GURow } from "./components/grid-system/Row";
 import { Modal as GUModal } from "./components/modal/Modal";
 import { Notification as GUNotification } from "./components/notification/Notification";
+import { Drawer as GUDrawer } from "./components/drawer/Drawer";
 
 export const Button = GUButton;
 export const ButtonGroup = GUButtonGroup;
@@ -19,3 +20,4 @@ export const Avatar = GUAvatar;
 export const Row = GURow;
 export const Modal = GUModal;
 export const Notification = GUNotification;
+export const Drawer = GUDrawer;
