@@ -11,10 +11,39 @@
 @import "./stylesheets/modal/modal.less";
 @import "./stylesheets/notification/notification.less";
 @import "./stylesheets/drawer/drawer.less";
+@import "./stylesheets/grid-system/row.less";
+@import "./stylesheets/grid-system/col.less";
+@import "./stylesheets/layouts/layout.less";
+@import "./stylesheets/menu/menu.less";
 
 html,
 body {
   font-family: "Inter", sans-serif;
   font-size: @font-size;
   background: #f8f8f8;
+  color: @text-color;
+  padding: 0px;
+  margin: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  color: @heading-color;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.col-items {
+  background-color: #24d9a342;
+  padding: 15px;
+  border-radius: @border-radius;
+  color: #19a178;
 }

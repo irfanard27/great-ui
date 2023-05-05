@@ -9,6 +9,9 @@ import { Row as GURow } from "./components/grid-system/Row";
 import { Modal as GUModal } from "./components/modal/Modal";
 import { Notification as GUNotification } from "./components/notification/Notification";
 import { Drawer as GUDrawer } from "./components/drawer/Drawer";
+import { Col as GUCol } from "./components/grid-system/Col";
+import { Layout as GULayout } from "./components/layouts/Layout";
+import { Menu as GUMenu } from "./components/menu/Menu";
 
 export const Button = GUButton;
 export const ButtonGroup = GUButtonGroup;
@@ -21,3 +24,6 @@ export const Row = GURow;
 export const Modal = GUModal;
 export const Notification = GUNotification;
 export const Drawer = GUDrawer;
+export const Col = GUCol;
+export const Layout = GULayout;
+export const Menu = GUMenu;

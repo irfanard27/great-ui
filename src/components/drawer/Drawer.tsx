@@ -51,7 +51,7 @@ const InternalDrawer: React.ForwardRefRenderFunction<unknown, DrawerProps> = (
           <div className="drawer-title">{title}</div>
           <div
             className="drawer-close"
-            style={{ cursor: "po" }}
+            style={{ cursor: "pointer", fontSize: 16 }}
             onClick={onClose}
           >
             <HiXMark />

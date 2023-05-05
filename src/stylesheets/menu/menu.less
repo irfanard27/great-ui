@@ -1,0 +1,29 @@
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  height: 50px;
+}
+
+.menu > li {
+  padding: 16px @padding-base;
+  border-bottom: 1px solid transparent;
+  color: lighten(@text-color, 30%);
+  cursor: pointer;
+}
+
+.menu > li:hover {
+  //background: lighten(@primary-color, 47%);
+  color: @text-color;
+  border-bottom: 1px solid @primary-color;
+}
+
+.menu > .active {
+  cursor: pointer;
+  color: @text-color;
+  border-bottom: 1px solid @primary-color;
+}
