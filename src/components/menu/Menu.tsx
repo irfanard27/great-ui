@@ -20,8 +20,18 @@ interface MenuProps extends React.HTMLAttributes<HTMLUListElement> {
 const Menu = forwardRef<HTMLUListElement, MenuProps>((props, ref) => {
   const { items } = props;
   const menuRef = (ref as any) || React.createRef<HTMLUListElement>();
+
+  const getLayout = () => {
+    const { layout } = props;
+    if (layout === "vertical") {
+      return "menu-vertical";
+    } else {
+      return "menu";
+    }
+  };
+
   return (
-    <ul className="menu" ref={menuRef} {...props}>
+    <ul className={getLayout()} ref={menuRef} {...props}>
       {items &&
         items.map((item) => {
           return <li key={item.key}>{item.label}</li>;

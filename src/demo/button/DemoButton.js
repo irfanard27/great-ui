@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, ButtonGroup, Card } from "../../great-ui";
+import { Button, ButtonGroup, Card, Spacing } from "../../great-ui";
 
 export default function DemoButton() {
   return (
@@ -7,30 +7,34 @@ export default function DemoButton() {
       <Card bordered={true} title="Great UI Button">
         <div>
           <h3>Single Button</h3>
-          <Button type="primary">Primary</Button>{" "}
-          <Button type="secondary">Secondary</Button> <Button>Default</Button>{" "}
-          <Button type="outlined">Outlined</Button>{" "}
-          <Button shadow>Shadow Button</Button>{" "}
-          <Button type="primary" shadow>
-            Primary Shadow Button
-          </Button>
+          <Spacing>
+            <Button type="primary">Primary</Button>
+            <Button type="secondary">Secondary</Button> <Button>Default</Button>
+            <Button type="outlined">Outlined</Button>
+            <Button shadow>Shadow Button</Button>
+            <Button type="primary" shadow>
+              Primary Shadow Button
+            </Button>
+          </Spacing>
         </div>
         <br />
         <div>
           <h3>Button Size</h3>
-          <Button type="outlined" size="super-large">
-            Outlined
-          </Button>{" "}
-          <Button type="primary" size="large">
-            Primary
-          </Button>{" "}
-          <Button type="secondary">Secondary</Button>{" "}
-          <Button shadow={true} size="small">
-            Shadow Button
-          </Button>{" "}
-          <Button type="primary" shadow={true} size="super-small">
-            Primary Shadow Button
-          </Button>
+          <Spacing>
+            <Button type="outlined" size="super-large">
+              Outlined
+            </Button>
+            <Button type="primary" size="large">
+              Primary
+            </Button>
+            <Button type="secondary">Secondary</Button>
+            <Button shadow={true} size="small">
+              Shadow Button
+            </Button>
+            <Button type="primary" shadow={true} size="super-small">
+              Primary Shadow Button
+            </Button>
+          </Spacing>
         </div>
         <div style={{ width: 340 }}>
           <h3>Button Block</h3>

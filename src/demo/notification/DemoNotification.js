@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Notification } from "../../great-ui";
+import { Button, Notification, Spacing } from "../../great-ui";
 
 export default function DemoNotification() {
   const openNotification = () => {
@@ -46,11 +46,14 @@ export default function DemoNotification() {
       <h1>Notification</h1>
 
       <div>
-        {" "}
-        <Button onClick={openNotification}>Success Notification</Button>
-        <Button onClick={openErrNotification}>Error Notification</Button>
-        <Button onClick={openWarningNotification}>Warning Notification</Button>
-        <Button onClick={openInfoNotification}>Info Notification</Button>
+        <Spacing>
+          <Button onClick={openNotification}>Success Notification</Button>
+          <Button onClick={openErrNotification}>Error Notification</Button>
+          <Button onClick={openWarningNotification}>
+            Warning Notification
+          </Button>
+          <Button onClick={openInfoNotification}>Info Notification</Button>
+        </Spacing>
       </div>
     </div>
   );

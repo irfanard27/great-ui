@@ -12,6 +12,8 @@ import { Drawer as GUDrawer } from "./components/drawer/Drawer";
 import { Col as GUCol } from "./components/grid-system/Col";
 import { Layout as GULayout } from "./components/layouts/Layout";
 import { Menu as GUMenu } from "./components/menu/Menu";
+import { Table as GUTable } from "./components/table/table";
+import { Spacing as GUSpacing } from "./components/spacing/Spacing";
 
 export const Button = GUButton;
 export const ButtonGroup = GUButtonGroup;
@@ -27,3 +29,5 @@ export const Drawer = GUDrawer;
 export const Col = GUCol;
 export const Layout = GULayout;
 export const Menu = GUMenu;
+export const Table = GUTable;
+export const Spacing = GUSpacing;
