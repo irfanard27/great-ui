@@ -1,10 +1,19 @@
 import React from "react";
-import { Card, Col, Row } from "../../great-ui";
+import { Card, Col, Row, Spacing, Button } from "../../great-ui";
 
 export default function DemoGrid() {
   return (
     <div>
-      <Card title="Great UI Grid System" bordered>
+      <Card
+        title="Great UI Grid System"
+        bordered
+        extra={
+          <Spacing>
+            <Button shadow>Load More</Button>
+            <Button shadow>Add Employee</Button>
+          </Spacing>
+        }
+      >
         <h4>Grid System</h4>
         <Row gutter={10}>
           <Col span={4}>

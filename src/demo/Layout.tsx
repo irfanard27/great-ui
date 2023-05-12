@@ -50,14 +50,15 @@ export default function LayoutDemo() {
             right={<Menu items={menus} />}
           />
           <Layout.Content>
+            <DemoNotification />
+            <br />
+            <DemoTable />
+            <br />
             <DemoButton />
             <br />
 
             <DemoGrid />
             <br />
-            <DemoNotification />
-            <br />
-            <DemoTable />
           </Layout.Content>
 
           <Layout.Footer>Ini Footer</Layout.Footer>

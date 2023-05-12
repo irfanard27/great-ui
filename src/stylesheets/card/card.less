@@ -4,9 +4,21 @@
   border-radius: @border-radius;
 }
 
-.gu-card > .gu-card-title {
-  padding: @padding-base;
+.gu-card > .gu-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
   border-bottom: @default-border;
+}
+
+.gu-card > .gu-card-header > .gu-card-extra {
+  padding-right: @padding-base;
+}
+
+.gu-card > .gu-card-header > .gu-card-title {
+  padding: @padding-base;
+  font-size: 14px;
   font-weight: 600;
 }
 
@@ -14,6 +26,7 @@
   padding: @padding-base;
   color: @text-color;
 }
+
 .gu-card > .gu-card-body {
   padding: @padding-base;
 }
@@ -24,12 +37,25 @@
   border-radius: @border-radius;
 }
 
-.gu-card-borderless > .gu-card-title {
+.gu-card-borderless > .gu-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+.gu-card-borderless > .gu-card-header > {
+  margin-bottom: 5px;
+  padding-right: @padding-base;
+}
+.gu-card-borderless > .gu-card-header > .gu-card-title {
   padding: @padding-base;
   font-weight: 600;
+  font-size: 14px;
 }
 
 .gu-card-borderless > .gu-card-content {
-  padding: @padding-base;
+  padding: 0px @padding-base;
+  padding-bottom: calc(@padding-base + @padding-base / 2);
   color: @text-color;
 }

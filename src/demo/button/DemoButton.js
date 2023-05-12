@@ -4,12 +4,14 @@ import { Button, ButtonGroup, Card, Spacing } from "../../great-ui";
 export default function DemoButton() {
   return (
     <div>
-      <Card bordered={true} title="Great UI Button">
+      <Card title="Great UI Button">
         <div>
           <h3>Single Button</h3>
           <Spacing>
             <Button type="primary">Primary</Button>
-            <Button type="secondary">Secondary</Button> <Button>Default</Button>
+            <Button type="secondary">Secondary</Button>
+            <Button>Default</Button>
+            <Button type="grey">Grey</Button>
             <Button type="outlined">Outlined</Button>
             <Button shadow>Shadow Button</Button>
             <Button type="primary" shadow>

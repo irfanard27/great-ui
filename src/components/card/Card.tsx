@@ -6,6 +6,7 @@ type CardProps = {
   className?: string;
   style?: React.CSSProperties;
   children?: React.ReactNode;
+  extra?: React.ReactNode;
 };
 
 const isBordered = (props: any) => {
@@ -28,7 +29,15 @@ const InternalCard = (props: CardProps) => {
 
   return (
     <div {...rest} {...getClassName}>
-      {title !== undefined ? <div className="gu-card-title">{title}</div> : ""}
+      <div className="gu-card-header">
+        {title && (
+          <div className="gu-card-title">
+            <div>{title}</div>
+          </div>
+        )}
+        {props.extra && <div className="gu-card-extra">{props.extra}</div>}
+      </div>
+
       <div className="gu-card-content">{props.children}</div>
     </div>
   );

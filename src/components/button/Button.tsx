@@ -8,7 +8,8 @@ type ButtonType =
   | "warning"
   | "success"
   | "pink"
-  | "purple";
+  | "purple"
+  | "grey";
 
 type ButtonSizes =
   | "default"
@@ -55,6 +56,9 @@ function getType(props: ButtonProps) {
       break;
     case "pink":
       className = "button button-pink";
+      break;
+    case "grey":
+      className = "button button-grey";
       break;
     case undefined:
       className = "button";

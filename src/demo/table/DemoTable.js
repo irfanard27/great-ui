@@ -1,5 +1,5 @@
 import React from "react";
-import { Avatar, Card, Table } from "../../great-ui";
+import { Avatar, Button, Card, Spacing, Table } from "../../great-ui";
 
 const data = [
   {
@@ -104,7 +104,19 @@ const columns = [
 
 export default function DemoTable() {
   return (
-    <Card title="Employee List" bordered>
+    <Card
+      title="Employee List"
+      extra={
+        <Spacing>
+          <Button type="grey" size="small">
+            Load More
+          </Button>
+          <Button type="grey" size="small">
+            Add Employee
+          </Button>
+        </Spacing>
+      }
+    >
       <Table data={data} columns={columns} />
     </Card>
   );

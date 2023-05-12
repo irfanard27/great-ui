@@ -1,11 +1,12 @@
 // Great UI colors
 @primary-color: #24d9a3;
-@secondary-color: lighten(#24d9a3, 47%);
+@secondary-color: lighten(@primary-color, 47%);
 @danger-color: #f95146;
 @warning-color: #f9d146;
 @success-color: #4bd8b6;
 @purple-color: #d334ed;
 @pink-color: #fe6190;
+@grey-color: #f7f7f7;
 
 // Main Typographi
 @text-color: #424242;
@@ -19,7 +20,8 @@
 @border-color: #f1f1f1;
 @default-border: solid 1px @border-color;
 
-@shadow: 1px 3px 6px rgba(0, 0, 0, 0.03);
+@shadow-color: rgba(0, 0, 0, 0.05);
+@shadow: 1px 3px 5px @shadow-color;
 
 @padding-base: 16px;
 @margin-base: 16px;
