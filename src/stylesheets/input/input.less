@@ -1,0 +1,15 @@
+.input {
+  padding: calc(@padding-base / 2);
+  border: solid @border-color 1px;
+  border-radius: @border-radius;
+  color: @text-color;
+}
+.input::placeholder {
+  color: lighten(@text-color, 40%);
+}
+
+.input:focus {
+  outline: 3px solid fade(@primary-color, 25%);
+  outline-offset: 0px;
+  border: solid @primary-color 1px;
+}

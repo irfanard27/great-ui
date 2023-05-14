@@ -14,6 +14,7 @@ import { Layout as GULayout } from "./components/layouts/Layout";
 import { Menu as GUMenu } from "./components/menu/Menu";
 import { Table as GUTable } from "./components/table/table";
 import { Spacing as GUSpacing } from "./components/spacing/Spacing";
+import { Input as GUInput } from "./components/input/Input";
 
 export const Button = GUButton;
 export const ButtonGroup = GUButtonGroup;
@@ -31,3 +32,4 @@ export const Layout = GULayout;
 export const Menu = GUMenu;
 export const Table = GUTable;
 export const Spacing = GUSpacing;
+export const Input = GUInput;

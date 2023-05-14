@@ -4,6 +4,7 @@ import DemoButton from "./button/DemoButton";
 import DemoGrid from "./button/DemoGrid";
 import DemoNotification from "./notification/DemoNotification";
 import DemoTable from "./table/DemoTable";
+import DemoInput from "./input/DemoInput";
 
 export default function LayoutDemo() {
   const menus = [
@@ -59,6 +60,9 @@ export default function LayoutDemo() {
 
             <DemoGrid />
             <br />
+
+            <br />
+            <DemoInput />
           </Layout.Content>
 
           <Layout.Footer>Ini Footer</Layout.Footer>
