@@ -56,3 +56,18 @@ h6 {
 .text-color-secondary {
   color: @secondary-text-color;
 }
+
+.circular-loading {
+  display: inline-block;
+  padding-top: 3px;
+  animation: circular-loading 1.2s linear infinite;
+}
+
+@keyframes circular-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

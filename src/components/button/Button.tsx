@@ -1,4 +1,6 @@
 import React from "react";
+import { Spacing } from "../spacing/Spacing";
+import { AiOutlineLoading } from "react-icons/ai";
 
 type ButtonType =
   | "primary"
@@ -28,6 +30,8 @@ interface ButtonProps {
   shadow?: boolean;
   size?: ButtonSizes;
   onClick?(event: React.MouseEvent<HTMLButtonElement>): void;
+  loading: boolean;
+  icon: React.ReactNode;
 }
 
 function getType(props: ButtonProps) {
@@ -97,13 +101,34 @@ const InternalButton: React.ForwardRefRenderFunction<unknown, ButtonProps> = (
   props,
   ref
 ) => {
-  const { block, shadow, type, ...rest } = props;
+  const { block, shadow, type, loading, ...rest } = props;
   const buttonRef = (ref as any) || React.createRef<HTMLElement>();
   const classNames = getType(props);
 
+  const isLoading = () => {
+    if (loading) {
+      return {
+        style: {
+          cursor: "not-allowed",
+        },
+        onClick: (e: React.MouseEvent<HTMLButtonElement>) => {
+          e.preventDefault();
+        },
+      };
+    }
+  };
   return (
-    <button {...rest} {...classNames} ref={buttonRef}>
-      {props.children}
+    <button {...rest} {...classNames} ref={buttonRef} {...isLoading()}>
+      <Spacing>
+        {!loading ? (
+          props.icon
+        ) : (
+          <span className="circular-loading">
+            <AiOutlineLoading />
+          </span>
+        )}
+        {props.children}
+      </Spacing>
     </button>
   );
 };

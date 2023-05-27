@@ -12,10 +12,18 @@ export default function DemoButton() {
             <Button type="secondary">Secondary</Button>
             <Button>Default</Button>
             <Button type="grey">Grey</Button>
-            <Button type="outlined">Outlined</Button>
-            <Button shadow>Shadow Button</Button>
+            <Button type="outlined" onClick={() => console.log("AA")}>
+              Outlined
+            </Button>
+            <Button shadow loading={true} onClick={() => console.log("BB")}>
+              Shadow Button
+            </Button>
             <Button type="primary" shadow>
               Primary Shadow Button
+            </Button>
+
+            <Button type="primary" shadow loading={true}>
+              Loading
             </Button>
           </Spacing>
         </div>
@@ -49,7 +57,6 @@ export default function DemoButton() {
             Button Block
           </Button>
         </div>
-
         <div>
           <h3>Button Group</h3>
           <ButtonGroup>
